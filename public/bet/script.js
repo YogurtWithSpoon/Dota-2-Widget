@@ -11,8 +11,8 @@ $( document ).ready(function(){
             betTeam.textContent = pageData.betTeam;
             betKof.textContent = pageData.betKof;
             
-            if(pageData.betPercent === ""){
-                betPercent.textContent === ""
+            if(pageData.betPercent == ""){
+                betPercent.textContent = "";
             } else{
                 betPercent.textContent = pageData.betPercent + '%'; 
             }

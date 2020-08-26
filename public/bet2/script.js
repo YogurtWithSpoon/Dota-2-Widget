@@ -13,7 +13,7 @@ $( document ).ready(function(){
             betKof.textContent = pageData.betKof2;
             
             if(pageData.betPercent2 === ""){
-                betPercent.textContent === ""
+                betPercent.textContent = "";
             } else{
                 betPercent.textContent = pageData.betPercent2 + '%'; 
             }
