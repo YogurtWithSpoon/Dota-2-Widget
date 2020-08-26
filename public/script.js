@@ -18,8 +18,8 @@ $(document).ready(function () {
       //seconds
       const score2 = document.querySelector(".team2__score");
       //update page
-      team1.setAttribute("src", "/teams/" + pageData.team1 + ".png");
-      team2.setAttribute("src", "/teams/" + pageData.team2 + ".png");
+      team1.setAttribute("src", "http://f0302262.xsph.ru/teams/teams/" + pageData.team1 + ".png");
+      team2.setAttribute("src", "http://f0302262.xsph.ru/teams/teams/" + pageData.team2 + ".png");
       title1.textContent = pageData.team1;
       title2.textContent = pageData.team2;
       gameType.textContent = pageData.gametype;
