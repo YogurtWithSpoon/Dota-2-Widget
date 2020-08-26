@@ -6,7 +6,9 @@ const fs = require('fs');
 const io = require('socket.io')(http);
 
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public',{
+  extensions: ['html', 'htm'],
+}));
 app.use(bodyParser.json());
 
 app.get('/readJSON',function(req,res){
