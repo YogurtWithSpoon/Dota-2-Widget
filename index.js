@@ -15,8 +15,8 @@ app.get('/readJSON',function(req,res){
   res.send(data);
 })
 
-app.get('/config', function (req, res) {
-  res.send('/config.html');
+app.get('/config', function(req, res) {
+  res.render('config'); 
 });
 
 app.post('/saveToJSON',function(req,res){
