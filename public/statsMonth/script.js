@@ -10,7 +10,7 @@ $( document ).ready(function(){
             const sum = Number(pageData.win2) + Number(pageData.lose2);
             const oneperc =  100 / sum;
             result.textContent = pageData.win2 + '/' + pageData.lose2 + '/' + pageData.draw2;
-            percent.textContent = "WinRate " + ("0%" ||(Number(pageData.win2) * oneperc).toFixed(2)) + "%";
+            percent.textContent = "WinRate " + (isNaN(Number(pageData.win2)) ? "0" : Number(pageData.win2) * oneperc).toFixed(2) + "%";
             body.style.cssText = '#000'
             if((pageData.shadow == true)){
                 body.style.cssText = `-webkit-text-stroke: 5px ${pageData.shadowColor}; color: ${pageData.color}`
