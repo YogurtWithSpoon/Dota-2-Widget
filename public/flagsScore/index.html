@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Score Module</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+    <div class="content__wrapper">
+        <div class="main__wrapper">
+            <div class="team__wrapper">
+                <video autoplay muted loop class="team1__logo logo"></video>
+                <span class="team1__title team__title"></span>
+            </div>
+            <div class="time">
+                <div class="score__wrapper">
+                    <span class="team1__score team_score"></span>
+                    <div class="versus">
+                        <span>VS</span>
+                        <div class="type">
+                            <span class="gametype"></span>
+                        </div>
+                    </div>
+                    <span class="team2__score team_score"></span>
+                </div>
+            </div>
+            <div class="team__wrapper">
+                <video autoplay muted loop class="team2__logo logo"></video>
+                <span class="team2__title team__title"></span>
+            </div>
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Config</title>
+    <link rel="stylesheet" href="config.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body>
+    <div class="main__wrapper">
+        <div class="content__wrapper">
+            <div class="score__widget">
+                <div class="team1">
+                    <select class="team" id="team1_select"></select>
+                </div>
+                <div class="score__wrapper">
+                    <div class="score__wrap">
+                        <input type="text" class="team1_score score">
+                        <span class="score">-</span>
+                        <input type="text" class="team2_score score">
+                    </div>
+                    <div class="type__wrapper">
+                        <select class="game__type" name="" id="game_select">
+                            <option value="Best Of 1">Best Of 1</option>
+                            <option value="Best Of 2">Best Of 2</option>
+                            <option value="Best Of 3">Best Of 3</option>
+                            <option value="Best Of 5">Best Of 5</option>
+                        </select>
+                        <span>Таймер(мин:сек)</span>
+                        <input type="checkbox" id="time">
+                    </div>
+                </div>
+                <div class="team2">
+                    <select class="team" name="" id="team2_select"></select>   
+                </div>
+            </div>
+            <div class="statistic__widget">
+                <div class="wrap">
+                    <div class="current__bet">
+                        <div class="title__bet">Текущая ставка </div>
+                        
+                        <div class="bet__wrapper">
+                            <div style="width: 300px">
+                            <select  id="team__bet"></select>
+                            </div>
+                            <input type="text" class="kof__bet" id="kof1">
+                            <input type="text" class="kof__percent" id="percent1">
+                            <button class="clear" id="clear1">Очистить</button>
+                        </div>
+                        
+                        <div class="bet__wrapper">
+                            <div style="width: 300px">
+                            <select  id="team__bet1"></select>
+                            </div>
+                            <input type="text" class="kof__bet" id="kof2">
+                            <input type="text" class="kof__percent" id="percent2">
+                            <button class="clear" id="clear2">Очистить</button>
+                        </div>
+    
+                        <div class="bet__wrapper">
+                            <div style="width: 300px">
+                            <select  id="team__bet2"></select>
+                            </div>
+                            <input type="text" class="kof__bet" id="kof3">
+                            <input type="text" class="kof__percent" id="percent3">
+                            <button class="clear" id="clear3">Очистить</button>
+                        </div>
+                
+                
+                
+                    </div>
+                    <div class="running__text">
+                        <div class="title__bet">Бегущая строка</div>
+                        <textarea class="text__style"></textarea>
+                    </div>
+            </div>
+            <div class="wrap">
+                <div class="stats">
+                    <div class="stats__title">Статистика</div>
+                    <div class="stats__item">
+                        <div class="stats__item_title">Побед</div>
+                        <div class="counter">
+                            
+                            <i class="fas fa-minus remove2"></i>
+                            <input type="number" value="0" class="win2">
+                            <i class="fas fa-plus add2"></i>
+                            
+                            <i class="fas fa-minus remove"></i>
+                            <input type="number" value="0" class="win">
+                            <i class="fas fa-plus add"></i>
+                            
+                        </div>
+                    </div>
+                    <div class="stats__item">
+                        <div class="stats__item_title">Ничья</div>
+                        <div class="counter">
+                            <i class="fas fa-minus remove"></i>
+                            <input type="number" value="0" class="draw2">
+                            <i class="fas fa-plus add"></i>
+                            
+                            <i class="fas fa-minus remove"></i>
+                            <input type="number" value="0" class="draw">
+                            <i class="fas fa-plus add"></i>
+                        </div>
+                    </div>
+                    <div class="stats__item">
+                        <div class="stats__item_title">Поражения</div>
+                        <div class="counter">
+
+                            <i class="fas fa-minus remove2"></i>
+                            <input type="number" value="0" class="lose2">
+                            <i class="fas fa-plus add2"></i>
+                            
+                            <i class="fas fa-minus remove"></i>
+                            <input type="number" value="0" class="lose">
+                            <i class="fas fa-plus add"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="color">
+                    <div class="color__title">Цвет Виджета</div>
+                    <div class="color__wrapper">
+                    <span>Цвет текста</span>
+                    <input type="color" class="widget__color">
+                    </div>
+                    <div class="shadow__wrapper">
+                    <input type="checkbox" id="shadow">
+                    <span>Обводка</span>
+                    <input type="color" class="shadow__color">
+                    </div>
+                </div>
+            </div>
+            <button class="button">Сохранить</button>
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="config.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

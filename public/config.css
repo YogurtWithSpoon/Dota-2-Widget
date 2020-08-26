@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,500i,700&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-size:20px;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.main__wrapper{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.bet__wrapper{
+    margin-top:10px;
+    display:flex;
+}
+.content__wrapper{
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 40px;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.score__widget{
+    padding:2%;
+    width:100%;
+    min-height:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score__wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: nowrap;
+}
+
+.score{
+    padding: 15px;
+    width:100px;
+    height:100px;
+    font-size: 50px;
+}
+
+.type__wrapper{
+    margin-top:30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.team1,.team2{
+    width:27.5%;
+    text-align: center;
+}
+
+.clear{
+    margin-left:20px;
+}
+.score__wrapper{
+    width:45%;
+}
+
+.current__bet{
+    width:50%;
+}
+.text__style{
+    width:100%;
+    height:70%;
+    font-size: 12px;
+}
+
+.running__text{
+    width:45%;
+}
+
+.game__type{
+    width:200px;
+    height:40px;
+    border:none;
+    padding-left: 20px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.select2 {
+width:100%!important;
+}
+
+.button{
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    width:300px;
+    height:60px;
+    border-radius:20px;
+    align-self:center;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    border:none;
+    font-size: 24px;
+    color:white;
+    margin: 20px 0;
+}
+
+.statistic__widget{
+    display: flex;
+    flex-direction: column;
+    padding:5%;
+    width:100%;
+}
+
+.title__bet,.stats__title,.color__title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.stats__title,.color__title{
+    margin-top:20px;
+}
+
+.kof__bet,.kof__percent{
+    width:50px;
+    margin-left:20px;
+}
+
+.stats,.color{
+    width:47%;
+    flex-wrap: wrap;
+}
+
+.stats__item{
+    display:flex;
+    justify-content: space-between;
+    margin:10px 0;
+}
+
+.stats__item_title{
+    margin-right:20px;
+}
+
+.win,.lose,.draw,.win2,.lose2,.draw2{
+    width:60px;
+}
+
+.wrap{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+    *{
+        font-size: 10px;
+    }
+    .content__wrapper {
+        min-width:60%;
+        min-height:20%;
+        border-radius: 20px;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    .team{
+        padding-left:5px;
+        border-radius: 20px;
+        font-size: 7px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+    .score{
+        padding: 3px;
+        width:40px;
+        height:40px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .game__type{
+        width:100px;
+        height:20px;
+        padding-left: 20px;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    .type__wrapper{
+        margin-top:10px;
+    }
+    .button {
+        margin-top: 20px;
+        background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+        width: 120px;
+        height: 30px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        border: none;
+        font-size: 16px;
+        color: white;
+    }
+}
