@@ -15,6 +15,10 @@ app.get('/readJSON',function(req,res){
   res.send(data);
 })
 
+app.get('/config', function (req, res) {
+  res.send('/config.html');
+});
+
 app.post('/saveToJSON',function(req,res){
   let data = {
     "team1" : req.body.team1,
