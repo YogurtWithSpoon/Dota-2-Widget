@@ -316,10 +316,11 @@ $(document).ready(function () {
       contentType: "application/json",
       data: JSON.stringify(data),
       dataType: "json",
-      success: function () {
-        alert("Готово");
-      },
-    });
+      success: function(response){
+        alert('Saveeee man');
+      }
+    })
+
     const socket = io();
     socket.emit('update', 'update');
   });

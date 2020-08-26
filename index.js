@@ -51,6 +51,7 @@ app.post('/saveToJSON',function(req,res){
   }
   let json = JSON.stringify(data);
   fs.writeFileSync('public/config.json', json, 'utf8');
+  res.json({success: true});
 })
 
 io.on('connection', (socket) => {
