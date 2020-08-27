@@ -3,7 +3,6 @@ $( document ).ready(function(){
         $.get( "../readJSON", function( data ) {
             clearInterval(countdown);
             let pageData = data;
-            console.log()
             //page data 
             const team1 = document.querySelector('.team1__logo');
             const team2 = document.querySelector('.team2__logo');
@@ -25,7 +24,7 @@ $( document ).ready(function(){
             gameType.textContent = pageData.gametype;
             score1.textContent = pageData.score1;
             score2.textContent = pageData.score2;
-            if(pageData.time ==  'true'){
+            if(pageData.time ==  true){
                $( ".team_score" ).css( "fontSize", "12em" )
                document.querySelector('.versus>span').textContent = ':'
                let type = document.querySelector('.type');
