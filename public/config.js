@@ -276,9 +276,9 @@ $(document).ready(function () {
     draw.value = pageData.draw;
     draw2.value = pageData.draw2;
     color.value = pageData.color;
-    shadow.checked = pageData.shadow == "true";
+    shadow.checked = pageData.shadow;
     shadowColor.value = pageData.shadowColor;
-    time.checked = pageData.time == "true";
+    time.checked = pageData.time;
     textLine.value = pageData.textLine;
   });
 
