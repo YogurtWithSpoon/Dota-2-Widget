@@ -283,44 +283,61 @@ $(document).ready(function () {
   });
 
   $(".button").click(function () {
-    let data = {
-      team1: document.querySelector("#team1_select").value,
-      team2: document.querySelector("#team2_select").value,
-      gameType: document.querySelector("#game_select").value,
-      score1: document.querySelector(".team1_score").value,
-      score2: document.querySelector(".team2_score").value,
-      betTeam: document.querySelector("#team__bet").value,
-      betKof: document.querySelector(".kof__bet").value,
-      betPercent: document.querySelector(".kof__percent").value,
-      betTeam2: document.querySelector("#team__bet1").value,
-      betKof2: document.querySelector("#kof2").value,
-      betPercent2: document.querySelector("#percent2").value,
-      betTeam3: document.querySelector("#team__bet2").value,
-      betKof3: document.querySelector("#kof3").value,
-      betPercent3: document.querySelector("#percent3").value,
-      win: document.querySelector(".win").value,
-      lose: document.querySelector(".lose").value,
-      win2: document.querySelector(".win2").value,
-      lose2: document.querySelector(".lose2").value,
-      draw: document.querySelector(".draw").value,
-      draw2: document.querySelector(".draw2").value,
-      color: document.querySelector(".widget__color").value,
-      shadow: document.querySelector("#shadow").checked,
-      shadowColor: document.querySelector(".shadow__color").value,
-      time: document.querySelector("#time").checked,
-      textLine: document.querySelector(".text__style").value,
-    };
-    $.post({
-      traditional: true,
-      url: "/saveToJSON",
-      contentType: "application/json",
-      data: JSON.stringify(data),
-      dataType: "json",
-      success: function(response){
-        alert('Saveeee man');
-      }
-    })
-
+    // let data = {
+    //   team1: document.querySelector("#team1_select").value,
+    //   team2: document.querySelector("#team2_select").value,
+    //   gameType: document.querySelector("#game_select").value,
+    //   score1: document.querySelector(".team1_score").value,
+    //   score2: document.querySelector(".team2_score").value,
+    //   betTeam: document.querySelector("#team__bet").value,
+    //   betKof: document.querySelector(".kof__bet").value,
+    //   betPercent: document.querySelector(".kof__percent").value,
+    //   betTeam2: document.querySelector("#team__bet1").value,
+    //   betKof2: document.querySelector("#kof2").value,
+    //   betPercent2: document.querySelector("#percent2").value,
+    //   betTeam3: document.querySelector("#team__bet2").value,
+    //   betKof3: document.querySelector("#kof3").value,
+    //   betPercent3: document.querySelector("#percent3").value,
+    //   win: document.querySelector(".win").value,
+    //   lose: document.querySelector(".lose").value,
+    //   win2: document.querySelector(".win2").value,
+    //   lose2: document.querySelector(".lose2").value,
+    //   draw: document.querySelector(".draw").value,
+    //   draw2: document.querySelector(".draw2").value,
+    //   color: document.querySelector(".widget__color").value,
+    //   shadow: document.querySelector("#shadow").checked,
+    //   shadowColor: document.querySelector(".shadow__color").value,
+    //   time: document.querySelector("#time").checked,
+    //   textLine: document.querySelector(".text__style").value,
+    // };
+    $.post( 'http://f0302262.xsph.ru/save.php',{
+      team1 : document.querySelector('#team1_select').value,
+      team2 : document.querySelector('#team2_select').value,
+      gameType : document.querySelector('#game_select').value,
+      score1 :  document.querySelector('.team1_score').value,
+      score2 : document.querySelector('.team2_score').value,
+      betTeam : document.querySelector('#team__bet').value,
+      betKof: document.querySelector('.kof__bet').value,
+      betPercent: document.querySelector('.kof__percent').value,
+      betTeam2 : document.querySelector('#team__bet1').value,
+      betKof2: document.querySelector('#kof2').value,
+      betPercent2: document.querySelector('#percent2').value,
+      betTeam3 : document.querySelector('#team__bet2').value,
+      betKof3: document.querySelector('#kof3').value,
+      betPercent3: document.querySelector('#percent3').value,
+      win: document.querySelector('.win').value,
+      lose: document.querySelector('.lose').value,
+      win2: document.querySelector('.win2').value,
+      lose2: document.querySelector('.lose2').value,
+      draw: document.querySelector('.draw').value,
+      draw2: document.querySelector('.draw2').value,
+      color: document.querySelector('.widget__color').value,
+      shadow: document.querySelector('#shadow').checked,
+      shadowColor : document.querySelector('.shadow__color').value,
+      time: document.querySelector('#time').checked,
+      textLine:document.querySelector('.text__style').value ,
+  })
+    alert('data sent')
     const socket = io();
     socket.emit('update', 'update');
   });
