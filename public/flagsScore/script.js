@@ -25,7 +25,7 @@ $( document ).ready(function(){
             gameType.textContent = pageData.gametype;
             score1.textContent = pageData.score1;
             score2.textContent = pageData.score2;
-            if(pageData.time ==  true){
+            if(pageData.time ==  'true'){
                $( ".team_score" ).css( "fontSize", "12em" )
                document.querySelector('.versus>span').textContent = ':'
                let type = document.querySelector('.type');
