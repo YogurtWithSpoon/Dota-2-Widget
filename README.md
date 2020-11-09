@@ -7,6 +7,6 @@ Configurable widget for obs to broadcast on Twitch.Tv
 
 Sorry! No deploy link. Used by friend. 
 
-You can see his broadcast at twitch.tv/ggs_11
+You can see his broadcast at [twitch](twitch.tv/ggs_11)
 
 ![alt imag](https://github.com/YogurtWithSpoon/PicturesForProjects/blob/master/widget.png?raw=true)
